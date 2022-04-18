@@ -1,0 +1,377 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color:#f5aca8;
+}
+.menubar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#343a40;
+    color: PINK;
+
+}
+.company-name{
+    font-size:1.5rem;
+    margin: .5rem;
+}
+/*set navbar layout horizontally*/
+.nav-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: right;
+}
+.nav-links li{
+    /* remove dots*/
+    list-style: none;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: pink;
+    padding: 1rem;
+    display: block;
+}
+.nav-links li:hover{
+    background-color: rgb(177, 170, 170);
+}
+/*togglebtn position*/
+.toggle-btn{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;        
+    height: 21px;
+}
+/*toggle btn to show*/
+.toggle-btn .line{
+    height: 3px;
+    width: 100%;
+    background-color: pink;
+    border-radius: 10px;
+}
+
+/*FOOTER START*/
+.footer .footer-content{
+   
+    height: 350px;
+    display: flex;
+}
+.footer{
+    background: #303036;
+    color: #d3d3d3;
+    height: 400px;
+    position: relative;
+}
+/*keeping copyright footer position*/
+.footer .footer-bottom{
+    background: #343a40;
+    color: #686868;
+    height:50px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    padding-top: 20px;
+    width: 100%;
+}
+.footer .footer-content .footer-section{
+    flex: 1;
+   
+    padding: 25px;
+}
+.footer .footer-content h1, 
+.footer .footer-content h2{
+    color: pink;
+} 
+.footer .footer-content .about h1 span{
+    color: pink;
+}
+.footer .footer-content .about .contact span{
+    display: block;
+    font-size: 1.1em;
+    margin-bottom:8px;
+}
+.footer .footer-content .about .socials a{
+    border: 1px solid grey;
+    width:40px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.8em;
+    border-radius: 5px;
+    color: pink;
+}
+.footer .footer-content .about .socials a:hover {
+    border: 1px solid white;
+    color: white;
+    transition: all .3s;
+}
+.footer .footer-content .links ul a{
+    display: block;
+    margin-bottom: 10px;
+    font-size:1.2em;
+    color: white;
+}
+.footer .footer-content .links ul a:hover{
+color:white;
+margin-left:15px;
+transition:all .3s;
+}
+.footer .footer-content .contact-form .contact-input{
+    background: #272727;
+    color: white;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+
+}
+.btn-big{
+    padding: .7rem 1.3rem;
+    line-height: 1.3rem;
+}
+.footer .footer-content .contact-form .contact-btn{
+    
+}
+/*FOOTER END*/
+/*heght adjustment for screen, if screen is 1000px or less*/
+ @media (max-width: 1000px) {
+    .toggle-btn{
+        display:flex;
+    }
+    .nav-links{
+        display:none;
+        width: 100%;
+    }
+ 
+ .menubar{
+     flex-direction: column;
+     align-items: flex-start;
+
+ }
+ .nav-links ul {
+     width: 100%;
+     flex-direction: column;
+
+ }
+ .nav-links li { 
+     text-align: center;
+ }
+ .nav-links li a {
+   padding: .5rem 1rem;
+ }
+ .nav-links.active{
+     display:flex;
+ }
+}
+.inner-container{
+    width:450px;
+    height:400px;
+    text-align: center;
+   
+
+}
+.inner-container img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*body alignment*/
+.body-box{
+    margin: 25px;
+    column-count:3 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr;
+    text-align: center;
+}
+.body-contentphotoshoot{
+    grid-column: 1;
+    margin: 0px;
+    text-align: center;
+   
+}
+.body-box .body-contentphotoshoot  .sociallink a:hover{
+    color:white;
+    margin-left: 15px;
+    transition: all .3s;
+}
+.body-box .body-contentphotoshoot  .sociallink a{
+    color:black;
+}
+.body-contentdogevents{
+    grid-column: 2;
+    margin: 0px; 
+    text-align: center;
+    
+}
+.body-box .body-contentdogevents  .sociallink a:hover{
+    color:white;
+    margin-left: 15px;
+    transition: all .3s;
+}
+.body-box .body-contentdogevents  .sociallink a{
+    color:black;
+}
+.body-contentproducts{
+    grid-column: 3;
+    margin: 0px;
+    text-align: center;
+}
+
+/*body colum alignment end*/
+.body-box .body-section h1, h2{
+    text-align: middle;
+}
+.gallerypics img{
+    margin:25px;
+   
+    width: 500px;
+    height: 500px;
+}
+.dogservice ul{
+    
+    display: inline-block;
+    margin: 20px;
+}
+.dogservice{
+    text-align: center;
+}
+.gallerypics{
+    margin: 80px;
+    column-count:3 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr;
+    text-align: center;
+}
+.contactbody{
+    display: grid;
+    column-count: 2;
+    grid-template-columns: 1fr 1fr;
+    text-align:center;
+}
+.contactbody .col1{
+    grid-column: 1;
+}
+.contactbody .col2{
+    grid-column: 2;
+
+}
+/*intro page*/
+header{
+    position: relative;
+    left:0;
+    top:0;
+    width:100%;
+    height:80px;
+}
+header h4{
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.1rem;
+
+}
+
+.videowrapper{
+    display:flex;
+    justify-content:center;
+    margin: 30px;
+    
+}
+.reviews h1{
+    text-align: center;
+    padding: 10px;
+}
+
+/*login form*/
+.login-page{
+    width:360px;
+    padding: 10% 0 0;
+    margin: auto;
+}
+.form{
+    position:relative;
+    z-index: 1;
+    background: rgb(226, 225, 225, 0.8);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+
+}
+.form input{
+    outline: 1;
+    background: rgb(238, 234, 234);
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form button{
+    text-transform: uppercase;
+    outline: 0;
+    background: green;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+.form button:hover, .form button:active{
+    background: grey;
+
+}
+.form .message{
+    margin: 15px 0 0;
+    color:black;
+    font-size: 12px;
+
+
+}
+.form .message a{
+    color:grey;
+    text-decoration: none;
+}
+
+.form .register-form{
+    display: none;
+}
+.serviceheader h2{
+    background-color:rgba(175, 164, 166, 0.8);
+    font-size: 2.3rem;
+}
+.dogservice img{
+    width: 20%;
+    height: 10%;
+}
+.dogservice li{
+    text-decoration: none;
+    list-style: none;
+}
+.smalldogpic {
+    width:50%;
+}
+.dogservice p img{
+    width:7%;
+}
+.reviews h1{
+    background-color:rgba(175, 164, 166, 0.8);
+}
+.reviews p{
+    font-size: 1.8rem;
+}
